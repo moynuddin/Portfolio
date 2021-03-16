@@ -1,0 +1,49 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  margin-top: 2rem;
+}
+
+.content {
+  height: 20rem;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title {
+  font-weight: 700;
+  color: #0575e6;
+  font-size: 3rem;
+}
+
+.sub-title {
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #044e97;
+}
+
+.learn_more {
+  width: 10rem;
+  height: 3rem;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #044e97;
+  color: antiquewhite;
+}
+
+.learn_more:hover {
+  background-color: #033465;
+}
+
+.graphic .svg {
+  width: 500px;
+  height: 300px;
+}
+/*# sourceMappingURL=main.component.css.map */

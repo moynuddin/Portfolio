@@ -1,0 +1,167 @@
+<footer data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div
+          class="wrapper"
+          data-aos="zoom-in-left"
+          data-aos-duration="1000"
+          data-aos-delay="1000"
+        >
+          <h2 class="heading">Skills</h2>
+          <p>What i know</p>
+        </div>
+        <div
+          class="icons"
+          data-aos="flip-right"
+          data-aos-duration="500"
+          data-aos-delay="1000"
+        >
+          <div
+            class="html5"
+            #icons
+            data-tilt
+            data-tilt-max="50"
+            data-tilt-speed="600"
+            data-tilt-perspective="500"
+            data-tilt-max-glare="0.8"
+            data-tilt-scale="1.1"
+          >
+            <fa-icon [icon]="faHtml5"></fa-icon>
+          </div>
+          <div
+            class="css3"
+            #css3
+            data-tilt
+            data-tilt-max="50"
+            data-tilt-speed="600"
+            data-tilt-perspective="500"
+            data-tilt-max-glare="0.8"
+            data-tilt-scale="1.1"
+          >
+            <fa-icon [icon]="faCss3"></fa-icon>
+          </div>
+          <div
+            class="js"
+            #js
+            data-tilt
+            data-tilt-max="50"
+            data-tilt-speed="600"
+            data-tilt-perspective="500"
+            data-tilt-max-glare="0.8"
+            data-tilt-scale="1.1"
+          >
+            <fa-icon [icon]="faJsSquare"></fa-icon>
+          </div>
+          <div
+            class="angular"
+            #angular
+            data-tilt
+            data-tilt-max="50"
+            data-tilt-speed="600"
+            data-tilt-perspective="500"
+            data-tilt-max-glare="0.8"
+            data-tilt-scale="1.1"
+          >
+            <fa-icon [icon]="faAngular"></fa-icon>
+          </div>
+          <div
+            class="git"
+            #git
+            data-tilt
+            data-tilt-max="50"
+            data-tilt-speed="600"
+            data-tilt-perspective="500"
+            data-tilt-max-glare="0.8"
+            data-tilt-scale="1.1"
+          >
+            <fa-icon [icon]="faGitAlt"></fa-icon>
+          </div>
+          <div
+            #github
+            data-tilt
+            data-tilt-max="50"
+            data-tilt-speed="600"
+            data-tilt-perspective="500"
+            data-tilt-max-glare="0.8"
+            data-tilt-scale="1.1"
+          >
+            <fa-icon [icon]="faGithubSquare"></fa-icon>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ng-container *ngIf="message">
+          <div class="alert alert-success alert-dismissible fade" role="alert">
+            {{ message }}
+          </div>
+        </ng-container>
+        <div
+          #myForm
+          class="wrapper-form"
+          data-tilt
+          data-aos="flip-right"
+          data-aos-delay="2000"
+          data-aos-duration="500"
+        >
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmitHandler()">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  formControlName="name"
+                  placeholder="Enter your name"
+                  [ngClass]="{ 'is-invalid': submitted }"
+                />
+                <div *ngIf="submitted" class="invalid-feedback">
+                  <div *ngIf="f.name.errors?.required">Name is required!</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  formControlName="email"
+                  placeholder="Enter your email"
+                  [ngClass]="{ 'is-invalid': submitted }"
+                />
+                <div *ngIf="submitted" class="invalid-feedback">
+                  <div *ngIf="f.email.errors?.required">Email is required!</div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <textarea
+                  class="form-control"
+                  formControlName="message"
+                  name="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Start typing .."
+                  [ngClass]="{ 'is-invalid': submitted }"
+                ></textarea>
+                <div *ngIf="submitted" class="invalid-feedback">
+                  <div *ngIf="f.message.errors?.required">
+                    Message is required!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-2">
+              <button class="btn btn-block">
+                <fa-icon [icon]="faSave"></fa-icon> &nbsp;
+                <b>Submit</b>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

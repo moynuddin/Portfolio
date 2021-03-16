@@ -1,0 +1,52 @@
+$primary-color: #0575e6;
+
+.my_nav {
+  list-style-type: none;
+  // margin-right: 10px;
+}
+
+li {
+  padding: 0.2 rem;
+  margin-right: 4rem;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.2rem;
+  a {
+    border-radius: 61% 39% 44% 56% / 66% 42% 58% 34%;
+    transition: border-radius 0.5s ease-in-out;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      border-bottom: 4px solid black;
+      top: 1.5 rem;
+      // transition: width 1s;
+    }
+    &:hover {
+      border: 4px solid grey;
+      border-radius: 86% 14% 91% 9% / 10% 81% 19% 90%;
+    }
+  }
+}
+
+.hireMe_btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: $primary-color;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem 1rem;
+  transition: 0.3 s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px $primary-color;
+    background: darken($primary-color, 10%);
+  }
+}

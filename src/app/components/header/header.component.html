@@ -1,0 +1,38 @@
+<nav class="d-flex justify-content-between">
+  <div class="mt-2 p-2">
+    <a href="#">Logo</a>
+  </div>
+  <div class="mt-2 p-2">
+    <ul class="d-flex justify-content-around mt-2 p-2 my_nav">
+      <li>
+        <a [routerLink]="['/main']" routerLinkActive="router-link-active"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/services']" routerLinkActive="router-link-active"
+          >Services</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/profile']" routerLinkActive="router-link-active"
+          >Profile</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/about']" routerLinkActive="router-link-active"
+          >About</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="mt-2 mr-3 p-2">
+    <button
+      class="hireMe_btn"
+      [routerLink]="['/about']"
+      routerLinkActive="router-link-active"
+    >
+      Hire Me
+    </button>
+  </div>
+</nav>

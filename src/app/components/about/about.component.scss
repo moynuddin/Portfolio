@@ -1,0 +1,114 @@
+@use '../header/header.component.scss' as *;
+
+.about {
+  width: 97.5%;
+  height: 100vh;
+  // background: #e4fbff;
+  background: linear-gradient(45deg, #085078, #85D8CE);
+  opacity: .3;
+  margin-top: 1.5rem;
+  border-top-left-radius: 30px;
+  margin-left: 2.35rem;
+  padding: 0;
+  box-shadow: 0 0 20px #b4aee8;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  // margin-left: 2rem;
+  // margin-right: 0;
+  // padding: 0;
+
+  // margin-top: 1rem;
+  padding-top: 1.5rem;
+  // background: #ffe3fe;
+  .content-part {
+    font-family: "Poppins", sans-serif;
+    padding: 1rem;
+    margin-top: 5rem;
+    margin-left: 1.5rem;
+    width: 400px;
+    .heading {
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+      font-stretch: expanded;
+      font-size: xx-large;
+      color: #0575e6;
+    }
+    .quotes {
+      font-family: "Poppines", "sans-serif";
+      color: #fff;
+      margin-top: 2rem;
+      font-weight: 300;
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: larger;
+    }
+    .btn-wrapper {
+      margin-top: 2.5rem;
+      .cv {
+        width: 10rem;
+        height: 2.5rem;
+        border: none;
+        background-color: #2a2a72;
+        background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 60%);
+        color: #fff;
+        border-radius: 50px;
+        transition: 0.5s ease-in-out;
+        font-weight: 500;
+
+        &:hover {
+          background-color: #2a2a72;
+          background-image: linear-gradient(-315deg, #2a2a72 0%, #009ffd 74%);
+          transform: scale(1.2);
+          box-shadow: 0 0 5px #17173f;
+        }
+      }
+    }
+  }
+  .image-part {
+    padding: 0rem;
+    margin-top: 6rem;
+    margin-left: 1.5rem;
+    z-index: 1;
+    .socials {
+      position: relative;
+      top: -18rem;
+      z-index: 5;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: xx-large;
+      margin-left: 30px;
+      padding: 10px;
+      a {
+        color: #17173f;
+        transition: 0.3s ease-in-out;
+      }
+      #github:hover {
+        color: #17173f;
+        transform: scale(1.5);
+      }
+      #linkedin:hover {
+        color: #2867b2;
+        transform: scale(1.5);
+      }
+      #instagram:hover {
+        color: #d62976;
+        transform: scale(1.5);
+      }
+    }
+  }
+  #scroll{
+    filter: drop-shadow(2px 4px 6px black);
+  }
+}
+.line{
+  position: absolute;
+  & img{
+    position: relative;
+    width: 16rem;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+}
