@@ -7,7 +7,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FooterComponent } from './components/footer/footer.component';
 const routes: Routes = [
-  { path: '', redirectTo: '', pathMatch: 'full' },
+  // { path: '', redirectTo: '', pathMatch: 'full' },
   { path: 'profile', component: ProfileComponent },
   { path: '', component: MainComponent },
   { path: 'services', component: ServicesComponent },
