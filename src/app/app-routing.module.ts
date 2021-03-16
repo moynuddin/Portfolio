@@ -9,7 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
   { path: 'profile', component: ProfileComponent },
-  { path: 'main', component: MainComponent },
+  { path: '', component: MainComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'about', component: AboutComponent },
   // { path: 'footer', component: FooterComponent },
