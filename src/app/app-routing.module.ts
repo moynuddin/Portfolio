@@ -7,12 +7,12 @@ import { ServicesComponent } from './components/services/services.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FooterComponent } from './components/footer/footer.component';
 const routes: Routes = [
-  // { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'profile', component: ProfileComponent },
-  { path: '', component: MainComponent },
+  { path: 'home', component: MainComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'about', component: AboutComponent },
-  // { path: 'footer', component: FooterComponent },
+  { path: 'skills', component: FooterComponent },
   { path: '**', component: NotfoundComponent },
 ];
 

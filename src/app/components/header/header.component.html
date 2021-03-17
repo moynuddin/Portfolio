@@ -1,11 +1,15 @@
 <nav class="d-flex justify-content-between">
-  <div class="mt-2 p-2">
-    <a href="#">Logo</a>
+  <div class="mt-2 p-2 logo">
+    <a [routerLink]="['/home']">
+      <img src="../../../assets/images/logo.png" alt="Logo" />
+    </a>
   </div>
   <div class="mt-2 p-2">
     <ul class="d-flex justify-content-around mt-2 p-2 my_nav">
       <li>
-        <a [routerLink]="['/']" routerLinkActive="router-link-active">Home</a>
+        <a [routerLink]="['/home']" routerLinkActive="router-link-active"
+          >Home</a
+        >
       </li>
       <li>
         <a [routerLink]="['/services']" routerLinkActive="router-link-active"
@@ -15,6 +19,11 @@
       <li>
         <a [routerLink]="['/profile']" routerLinkActive="router-link-active"
           >Profile</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/skills']" routerLinkActive="router-link-active"
+          >Skills</a
         >
       </li>
       <li>

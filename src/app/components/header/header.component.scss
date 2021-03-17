@@ -4,6 +4,11 @@ $primary-color: #0575e6;
   list-style-type: none;
   // margin-right: 10px;
 }
+.logo a, img{
+  width: 6rem;
+  height: 6rem;
+  filter: drop-shadow(0 0 1px grey);
+}
 
 li {
   padding: 0.2 rem;
@@ -13,8 +18,8 @@ li {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.2rem;
   a {
-    border-radius: 61% 39% 44% 56% / 66% 42% 58% 34%;
-    transition: border-radius 0.5s ease-in-out;
+    // border-radius: 61% 39% 44% 56% / 66% 42% 58% 34%;
+    // transition: border-radius 0.5s ease-in-out;
     padding: 0.5rem 1rem;
     text-decoration: none;
     &::before {
@@ -25,10 +30,10 @@ li {
       top: 1.5 rem;
       // transition: width 1s;
     }
-    &:hover {
-      border: 4px solid grey;
-      border-radius: 86% 14% 91% 9% / 10% 81% 19% 90%;
-    }
+    // &:hover {
+    //   // border: 4px solid grey;
+    //   // border-radius: 86% 14% 91% 9% / 10% 81% 19% 90%;
+    // }
   }
 }
 

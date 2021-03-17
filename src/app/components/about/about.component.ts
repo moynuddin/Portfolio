@@ -8,7 +8,6 @@ import {
 
 import aos from 'aos';
 import VanillaTilt from 'vanilla-tilt';
-
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
@@ -36,5 +35,10 @@ export class AboutComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     VanillaTilt.init(this.scroll.nativeElement);
     VanillaTilt.init(this.line.nativeElement);
+  }
+
+  downloadFileHandler() {
+    window.open('../../../assets/docs/Moinuddin-Resume.pdf');
+    // saveAs(url, name);
   }
 }
