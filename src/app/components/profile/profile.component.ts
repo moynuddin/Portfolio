@@ -16,6 +16,8 @@ export class ProfileComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    aos.init();
+    aos.init({
+      once: true,
+    });
   }
 }

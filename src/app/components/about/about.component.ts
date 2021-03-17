@@ -27,6 +27,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     aos.init({
+      once: true,
       // delay: 1000,
       startEvent: 'load',
     });

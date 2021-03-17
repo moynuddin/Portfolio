@@ -16,6 +16,9 @@ import { faCss3 } from '@fortawesome/free-brands-svg-icons';
 import { faAngular } from '@fortawesome/free-brands-svg-icons';
 import { faGitAlt } from '@fortawesome/free-brands-svg-icons';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
+import { faSass } from '@fortawesome/free-brands-svg-icons';
+import { faBootstrap } from '@fortawesome/free-brands-svg-icons';
 import { faSave } from '@fortawesome/free-solid-svg-icons';
 
 import { FormService } from '../../_services/form.service';
@@ -32,6 +35,9 @@ export class FooterComponent implements OnInit, AfterViewInit {
   @ViewChild('git') git: ElementRef;
   @ViewChild('github') github: ElementRef;
   @ViewChild('myForm') myForm: ElementRef;
+  @ViewChild('sass') sass: ElementRef;
+  @ViewChild('react') react: ElementRef;
+  @ViewChild('bootstrap') bootstrap: ElementRef;
   contactForm: FormGroup;
   submitted: Boolean = false;
   faHtml5 = faHtml5;
@@ -41,12 +47,17 @@ export class FooterComponent implements OnInit, AfterViewInit {
   faGitAlt = faGitAlt;
   faGithubSquare = faGithubSquare;
   faSave = faSave;
+  faBootstrap = faBootstrap;
+  faReact = faReact;
+  faSass = faSass;
   message: string;
 
   constructor(private fb: FormBuilder, private formServiceAPI: FormService) {}
 
   ngOnInit(): void {
-    aos.init();
+    aos.init({
+      once: true,
+    });
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
@@ -64,6 +75,9 @@ export class FooterComponent implements OnInit, AfterViewInit {
     VanillaTilt.init(this.git.nativeElement);
     VanillaTilt.init(this.github.nativeElement);
     VanillaTilt.init(this.myForm.nativeElement);
+    VanillaTilt.init(this.sass.nativeElement);
+    VanillaTilt.init(this.react.nativeElement);
+    VanillaTilt.init(this.bootstrap.nativeElement);
   }
 
   onSubmitHandler() {

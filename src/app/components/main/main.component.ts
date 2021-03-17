@@ -17,7 +17,9 @@ export class MainComponent implements OnInit, AfterViewInit {
   constructor() {}
 
   ngOnInit(): void {
-    aos.init();
+    aos.init({
+      once: true,
+    });
   }
 
   ngAfterViewInit() {

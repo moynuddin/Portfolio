@@ -19,7 +19,7 @@ footer {
     color: rgb(89, 78, 233);
   }
   & p{
-    font-family: "Montserrat", sans-serif;
+    font-family: "Parisienne", cursive;
     font-size: 1.2rem;
     font-weight: bolder;
   }
@@ -36,15 +36,16 @@ footer {
 }
 .icons{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 2rem;
-  font-size: 8rem;
-  margin-top: 5rem;
+  grid-template-columns: repeat(3,2fr);
+  grid-auto-rows: minmax(3rem, auto);
+  gap: 1rem;
+  font-size: 7rem;
+  margin-top: 2rem;
 
   .html5{
     transition: .3s ease-in-out;
     &:hover{
-      color: rgb(233, 69, 69);
+      color: #e34c26;
     }
   }
   .css3{
@@ -62,7 +63,7 @@ footer {
   .angular{
     transition: .3s ease-in-out;
     &:hover{
-      color: red;
+      color: rgb(221, 27, 22);
     }
   }
   .git{
@@ -70,6 +71,24 @@ footer {
     &:hover{
       color: red;
     }
+}
+.sass{
+  transition: .3s ease-in-out;
+  &:hover{
+    color: #CD6799;
+  }
+}
+.react{
+  transition: .3s ease-in-out;
+  &:hover{
+    color: #61DBFB;
+  }
+}
+.bootstrap{
+  transition: .3s ease-in-out;
+  &:hover{
+    color: rgb(86, 61, 124);
+  }
 }
 }
 .wrapper-form{
