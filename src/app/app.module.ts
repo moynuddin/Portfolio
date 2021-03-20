@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModule } from 'ngx-bootstrap/alert';
 
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ServicesComponent } from './components/services/services.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     ReactiveFormsModule,
     FontAwesomeModule,
     AlertModule.forRoot(),
+    NgbModule,
+    NgbCollapseModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

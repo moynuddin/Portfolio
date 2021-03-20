@@ -2,6 +2,14 @@
   list-style-type: none;
 }
 
+.logo a,
+img {
+  width: 6rem;
+  height: 6rem;
+  -webkit-filter: drop-shadow(0 0 1px grey);
+          filter: drop-shadow(0 0 1px grey);
+}
+
 li {
   padding: 0.2 rem;
   margin-right: 4rem;
@@ -12,9 +20,6 @@ li {
 }
 
 li a {
-  border-radius: 61% 39% 44% 56% / 66% 42% 58% 34%;
-  -webkit-transition: border-radius 0.5s ease-in-out;
-  transition: border-radius 0.5s ease-in-out;
   padding: 0.5rem 1rem;
   text-decoration: none;
 }
@@ -27,15 +32,10 @@ li a::before {
   top: 1.5 rem;
 }
 
-li a:hover {
-  border: 4px solid grey;
-  border-radius: 86% 14% 91% 9% / 10% 81% 19% 90%;
-}
-
 .hireMe_btn {
   display: block;
-  width: 200px;
-  height: 50px;
+  width: 12rem;
+  height: 3rem;
   border: none;
   border-radius: 10px;
   background: #0575e6;

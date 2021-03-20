@@ -9,124 +9,142 @@ footer {
 .copy_right {
   font-weight: 400;
 }
-.wrapper{
+.wrapper {
   margin-top: 2rem;
-  & h2{
+  & h2 {
     display: inline-flex;
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-size: 4.5rem;
     color: rgb(89, 78, 233);
   }
-  & p{
+  & p {
     font-family: "Parisienne", cursive;
     font-size: 1.2rem;
     font-weight: bolder;
   }
-  .heading::before{
-    content: '';
+  .heading::before {
+    content: "";
     position: relative;
-    width: .2rem;
-    border-top: .2rem;
+    width: 0.2rem;
+    border-top: 0.2rem;
     background: #262626;
-    margin-right: .2rem;
+    margin-right: 0.2rem;
     animation: skills 1s ease-in-out infinite;
-
   }
 }
-.icons{
+.icons {
   display: grid;
-  grid-template-columns: repeat(3,2fr);
+  grid-template-columns: repeat(3, 2fr);
   grid-auto-rows: minmax(3rem, auto);
   gap: 1rem;
   font-size: 7rem;
   margin-top: 2rem;
 
-  .html5{
-    transition: .3s ease-in-out;
-    &:hover{
+  .html5 {
+    transition: 0.3s ease-in-out;
+    &:hover {
       color: #e34c26;
     }
   }
-  .css3{
-    transition: .3s ease-in-out;
-    &:hover{
+  .css3 {
+    transition: 0.3s ease-in-out;
+    &:hover {
       color: rgb(89, 78, 233);
     }
   }
-  .js{
-    transition: .3s;
-    &:hover{
+  .js {
+    transition: 0.3s;
+    &:hover {
       color: chartreuse;
     }
   }
-  .angular{
-    transition: .3s ease-in-out;
-    &:hover{
+  .angular {
+    transition: 0.3s ease-in-out;
+    &:hover {
       color: rgb(221, 27, 22);
     }
   }
-  .git{
-    transition: .3s ease-in-out;
-    &:hover{
+  .git {
+    transition: 0.3s ease-in-out;
+    &:hover {
       color: red;
     }
-}
-.sass{
-  transition: .3s ease-in-out;
-  &:hover{
-    color: #CD6799;
+  }
+  .sass {
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: #cd6799;
+    }
+  }
+  .react {
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: #61dbfb;
+    }
+  }
+  .bootstrap {
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: rgb(86, 61, 124);
+    }
   }
 }
-.react{
-  transition: .3s ease-in-out;
-  &:hover{
-    color: #61DBFB;
-  }
-}
-.bootstrap{
-  transition: .3s ease-in-out;
-  &:hover{
-    color: rgb(86, 61, 124);
-  }
-}
-}
-.wrapper-form{
+.wrapper-form {
   margin-top: 13rem;
   background: transparent;
   border: 5px dashed #36d1dc;
   padding: 1rem 2rem;
   box-shadow: 0 0 10px #36d1dc;
 }
-.form-control{
+.form-control {
   background: transparent !important;
   outline: 0;
   border-width: 0 0 2px;
   border-color: black;
   border-radius: 0;
-  &::placeholder{
+  &::placeholder {
     color: rgb(248, 231, 231);
     font-size: 1rem;
   }
-&:focus{
-  box-shadow: none;
+  &:focus {
+    box-shadow: none;
   }
 }
-.btn{
+.btn {
   background: cyan;
-
 }
 
-
-@keyframes skills{
+@keyframes skills {
   0% {
     transform: rotateX(0deg) scaleZ(1);
-    background: red
-  }50%{
+    background: red;
+  }
+  50% {
     transform: rotateX(180deg) scaleZ(1.2);
-    background: green
-  }100%{
+    background: green;
+  }
+  100% {
     transform: rotateX(360deg) scaleZ(1);
-    background: blue
+    background: blue;
+  }
+}
+
+@media (max-width: 575.98px) {
+  footer {
+    width: 100%;
+    height: 100vh;
+  }
+  .wrapper {
+    & h2 {
+      font-size: 3rem;
+    }
+  }
+  .icons {
+    font-size: 4rem;
+    margin-left: 1rem;
+  }
+  .wrapper-form {
+    margin-top: 3rem;
   }
 }

@@ -1,11 +1,228 @@
 footer {
-  width: 100%;
-  height: 60vh;
+  width: 95%;
+  height: 100vh;
   background-image: -webkit-gradient(linear, left top, right top, from(#36d1dc), to(#5b86e5));
   background-image: linear-gradient(to right, #36d1dc, #5b86e5);
+  border-top-right-radius: 20px;
+  margin-top: 1.5rem;
+  -webkit-box-shadow: 0 0 10px #4747b1;
+          box-shadow: 0 0 10px #4747b1;
 }
 
 .copy_right {
   font-weight: 400;
+}
+
+.wrapper {
+  margin-top: 2rem;
+}
+
+.wrapper h2 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 4.5rem;
+  color: #594ee9;
+}
+
+.wrapper p {
+  font-family: "Parisienne", cursive;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.wrapper .heading::before {
+  content: "";
+  position: relative;
+  width: 0.2rem;
+  border-top: 0.2rem;
+  background: #262626;
+  margin-right: 0.2rem;
+  -webkit-animation: skills 1s ease-in-out infinite;
+          animation: skills 1s ease-in-out infinite;
+}
+
+.icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (2fr)[3];
+      grid-template-columns: repeat(3, 2fr);
+  grid-auto-rows: minmax(3rem, auto);
+  gap: 1rem;
+  font-size: 7rem;
+  margin-top: 2rem;
+}
+
+.icons .html5 {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.icons .html5:hover {
+  color: #e34c26;
+}
+
+.icons .css3 {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.icons .css3:hover {
+  color: #594ee9;
+}
+
+.icons .js {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.icons .js:hover {
+  color: chartreuse;
+}
+
+.icons .angular {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.icons .angular:hover {
+  color: #dd1b16;
+}
+
+.icons .git {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.icons .git:hover {
+  color: red;
+}
+
+.icons .sass {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.icons .sass:hover {
+  color: #cd6799;
+}
+
+.icons .react {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.icons .react:hover {
+  color: #61dbfb;
+}
+
+.icons .bootstrap {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.icons .bootstrap:hover {
+  color: #563d7c;
+}
+
+.wrapper-form {
+  margin-top: 13rem;
+  background: transparent;
+  border: 5px dashed #36d1dc;
+  padding: 1rem 2rem;
+  -webkit-box-shadow: 0 0 10px #36d1dc;
+          box-shadow: 0 0 10px #36d1dc;
+}
+
+.form-control {
+  background: transparent !important;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: black;
+  border-radius: 0;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #f8e7e7;
+  font-size: 1rem;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #f8e7e7;
+  font-size: 1rem;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #f8e7e7;
+  font-size: 1rem;
+}
+
+.form-control::placeholder {
+  color: #f8e7e7;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn {
+  background: cyan;
+}
+
+@-webkit-keyframes skills {
+  0% {
+    -webkit-transform: rotateX(0deg) scaleZ(1);
+            transform: rotateX(0deg) scaleZ(1);
+    background: red;
+  }
+  50% {
+    -webkit-transform: rotateX(180deg) scaleZ(1.2);
+            transform: rotateX(180deg) scaleZ(1.2);
+    background: green;
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) scaleZ(1);
+            transform: rotateX(360deg) scaleZ(1);
+    background: blue;
+  }
+}
+
+@keyframes skills {
+  0% {
+    -webkit-transform: rotateX(0deg) scaleZ(1);
+            transform: rotateX(0deg) scaleZ(1);
+    background: red;
+  }
+  50% {
+    -webkit-transform: rotateX(180deg) scaleZ(1.2);
+            transform: rotateX(180deg) scaleZ(1.2);
+    background: green;
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) scaleZ(1);
+            transform: rotateX(360deg) scaleZ(1);
+    background: blue;
+  }
+}
+
+@media (max-width: 575.98px) {
+  footer {
+    width: 100%;
+    height: 100vh;
+  }
+  .wrapper h2 {
+    font-size: 3rem;
+  }
+  .icons {
+    font-size: 4rem;
+    margin-left: 1rem;
+  }
+  .wrapper-form {
+    margin-top: 3rem;
+  }
 }
 /*# sourceMappingURL=footer.component.css.map */

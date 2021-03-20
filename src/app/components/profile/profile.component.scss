@@ -5,8 +5,8 @@
   height: 100vh;
   position: relative;
   // background: url(../../../assets/images/shapes.png);
-  & img{
-    opacity: .1;
+  & img {
+    opacity: 0.1;
     position: absolute;
     width: 100%;
     height: inherit;
@@ -99,7 +99,7 @@
   }
 }
 
-.line{
+.line {
   position: absolute;
   height: 20rem;
 }
@@ -160,5 +160,30 @@
   }
   0% {
     color: blue;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .profile {
+    height: 100vh;
+
+    & img {
+      display: none;
+    }
+  }
+  .wrapper {
+    margin-left: 1rem;
+  }
+  .work-exp {
+    margin-left: -2rem;
+  }
+  .exp {
+    width: 100%;
+  }
+  .company-name {
+    font-size: 1rem;
+  }
+  .duration {
+    font-size: 0.5rem;
   }
 }

@@ -4,7 +4,8 @@ $primary-color: #0575e6;
   list-style-type: none;
   // margin-right: 10px;
 }
-.logo a, img{
+.logo a,
+img {
   width: 6rem;
   height: 6rem;
   filter: drop-shadow(0 0 1px grey);
@@ -39,8 +40,8 @@ li {
 
 .hireMe_btn {
   display: block;
-  width: 200px;
-  height: 50px;
+  width: 12rem;
+  height: 3rem;
   border: none;
   border-radius: 10px;
   background: $primary-color;

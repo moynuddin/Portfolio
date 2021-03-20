@@ -2,7 +2,8 @@
 .about {
   width: 97.5%;
   height: 100vh;
-  background: #e4fbff;
+  background: linear-gradient(45deg, #085078, #85d8ce);
+  opacity: 0.3;
   margin-top: 1.5rem;
   border-top-left-radius: 30px;
   margin-left: 2.35rem;
@@ -40,6 +41,7 @@
 
 .container .content-part .quotes {
   font-family: "Poppines", "sans-serif";
+  color: #fff;
   margin-top: 2rem;
   font-weight: 300;
   text-align: justify;
@@ -59,8 +61,8 @@
   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 60%);
   color: #fff;
   border-radius: 50px;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   font-weight: 500;
 }
 
@@ -120,5 +122,54 @@
   color: #d62976;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+.container #scroll {
+  -webkit-filter: drop-shadow(2px 4px 6px black);
+          filter: drop-shadow(2px 4px 6px black);
+}
+
+.line {
+  position: absolute;
+}
+
+.line img {
+  position: relative;
+  width: 16rem;
+  -webkit-filter: drop-shadow(2px 4px 6px black);
+          filter: drop-shadow(2px 4px 6px black);
+}
+
+@media (max-width: 575.98px) {
+  .about {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+  .line img {
+    display: none;
+  }
+  .image-part {
+    display: none;
+  }
+  .container {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+  .container .content-part {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
 }
 /*# sourceMappingURL=about.component.css.map */
