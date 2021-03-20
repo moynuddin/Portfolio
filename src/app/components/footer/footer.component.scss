@@ -1,4 +1,4 @@
-footer {
+.skills {
   width: 95%;
   height: 100vh;
   background-image: linear-gradient(to right, #36d1dc, #5b86e5);
@@ -131,8 +131,13 @@ footer {
 }
 
 @media (max-width: 575.98px) {
-  footer {
+  .skills {
     width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+  }
+  .container {
     height: 100vh;
   }
   .wrapper {

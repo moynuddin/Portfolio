@@ -127,6 +127,9 @@
   .image-part {
     display: none;
   }
+  .image-part svg {
+    display: none;
+  }
   .container {
     display: inline-flex;
     justify-content: center;
