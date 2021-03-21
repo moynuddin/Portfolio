@@ -15,16 +15,34 @@
         </p>
         <h1 class="sub-title">Hi, I'm Moinuddin</h1>
 
-        <div class="mt-4">
+        <div class="mt-4 d-inline-flex">
           <button class="learn_more" [routerLink]="['/services']">
             Learn more!
           </button>
+          <button
+            type="button"
+            class="download"
+            (click)="downloadFileHandler()"
+          >
+            Download CV
+          </button>
+        </div>
+        <div
+          class="socials mt-4 d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"
+        >
+          <a href="#" id="github"><fa-icon [icon]="faGithub"></fa-icon></a>
+          <a href="#" id="linkedin"
+            ><fa-icon [icon]="faLinkedinIn"></fa-icon
+          ></a>
+          <a href="#" id="instagram"
+            ><fa-icon [icon]="faInstagramSquare"></fa-icon
+          ></a>
         </div>
       </div>
     </div>
     <div
       #graphic
-      class="graphic p-2 d-none d-lg-block d-xl-block"
+      class="graphic p-2 d-none d-sm-none d-md-block d-lg-block d-xl-block"
       data-tilt
       data-aos="fade-down-right"
       data-aos-delay="500"

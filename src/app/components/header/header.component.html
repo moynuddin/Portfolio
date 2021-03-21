@@ -11,7 +11,7 @@
   >
     &#9776;
   </button> -->
-  <div #burger class="hamburger" (click)="toggel()"></div>
+  <div #burger class="navbar-toggler hamburger" (click)="toggel()"></div>
 
   <!-- Step 2: Add the ngbCollapse directive to the element below. -->
   <div
@@ -19,12 +19,13 @@
     class="collapse navbar-collapse justify-content-around"
   >
     <ul class="navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item">
         <!-- Step 4: Close the menu when a link is clicked. -->
         <a
           class="nav-link"
           [routerLink]="'/home'"
-          (click)="isMenuCollapsed = true"
+          routerLinkActive="is-active"
+          (click)="toggel()"
           >Home</a
         >
       </li>
@@ -32,7 +33,8 @@
         <a
           class="nav-link"
           [routerLink]="'/services'"
-          (click)="isMenuCollapsed = true"
+          routerLinkActive="is-active"
+          (click)="toggel()"
           >Services</a
         >
       </li>
@@ -40,7 +42,8 @@
         <a
           class="nav-link"
           [routerLink]="'/profile'"
-          (click)="isMenuCollapsed = true"
+          routerLinkActive="is-active"
+          (click)="toggel()"
           >Profile</a
         >
       </li>
@@ -48,7 +51,8 @@
         <a
           class="nav-link"
           [routerLink]="'/skills'"
-          (click)="isMenuCollapsed = true"
+          routerLinkActive="is-active"
+          (click)="toggel()"
           >Skills</a
         >
       </li>
@@ -56,11 +60,18 @@
         <a
           class="nav-link"
           [routerLink]="'/about'"
-          (click)="isMenuCollapsed = true"
+          routerLinkActive="is-active"
+          (click)="toggel()"
           >About</a
         >
       </li>
     </ul>
-    <button class="btn btn-primary hireMe_btn">Hire Me</button>
+    <button
+      class="btn btn-primary hireMe_btn"
+      [routerLink]="['/skills']"
+      (click)="toggel()"
+    >
+      Hire Me
+    </button>
   </div>
 </nav>

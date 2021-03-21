@@ -34,7 +34,8 @@
             ],
             "scripts": [
               "node_modules/vanilla-tilt/dist/vanilla-tilt.js",
-              "node_modules/aos/dist/aos.js"
+              "node_modules/aos/dist/aos.js",
+              "node_modules/animejs/lib/anime.es.js"
             ]
           },
           "configurations": {

@@ -1,5 +1,8 @@
 $primary-color: #0575e6;
 
+nav {
+  z-index: 1;
+}
 .my_nav {
   list-style-type: none;
   // margin-right: 10px;
@@ -37,6 +40,10 @@ li {
     // }
   }
 }
+.is-active {
+  color: #031a31;
+  // background: #262626;
+}
 .hamburger {
   width: 2rem;
   height: 0.5rem;
@@ -62,12 +69,13 @@ li {
     transform: translateY(-16px);
   }
   &::after {
-    transform: translateY(16px);
+    transform: translateY(10px);
   }
 }
 .hamburger.open {
   transform: translateX(-5rem);
   background: transparent;
+  border: none;
 }
 .hamburger.open::before {
   width: 2rem;
@@ -96,3 +104,18 @@ li {
     background: darken($primary-color, 10%);
   }
 }
+// @media (max-width: 575.98px) {
+//   .hireMe_btn {
+//     display: block;
+//     width: 12rem;
+//     height: 3rem;
+//     border: none;
+//     color: $primary-color;
+//     // border-radius: 10px;
+//     background: transparent;
+//     color: #fff;
+//     font-weight: 400;
+//     letter-spacing: 0.2rem;
+//     padding: 0.5rem 1rem;
+//   }
+// }
