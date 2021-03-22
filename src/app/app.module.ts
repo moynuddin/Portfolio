@@ -9,6 +9,7 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { NgxSpinnerModule } from 'ngx-spinner'
 import { ToastrModule  } from 'ngx-toastr'
+import {NgxTypedJsModule} from 'ngx-typed-js';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -40,10 +41,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    AlertModule.forRoot(),
     NgbModule,
     NgbCollapseModule,
     NgxSpinnerModule,
+    NgxTypedJsModule,
+    AlertModule.forRoot(),
     ToastrModule.forRoot({
       timeOut:1000,
       positionClass: 'toast-top-right',

@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
 import aos from 'aos';
-// import anime from 'animejs/lib/anime.es.js';
+import Typed from 'typed.js/src/typed.js';
 import {
   faGithub,
   faInstagramSquare,
@@ -19,10 +19,13 @@ import {
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit, AfterViewInit {
+  @ViewChild('subtitle') subtitle: ElementRef;
   @ViewChild('graphic') graphic: ElementRef;
   faGithub = faGithub;
   faLinkedinIn = faLinkedinIn;
   faInstagramSquare = faInstagramSquare;
+  options: any;
+  typed: any;
   constructor() {}
 
   ngOnInit(): void {
@@ -32,6 +35,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+
     VanillaTilt.init(this.graphic.nativeElement);
   }
   downloadFileHandler() {

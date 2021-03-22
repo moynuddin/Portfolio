@@ -3,19 +3,40 @@
     class="hero-sub d-sm-inline-flex flex-sm-column justify-content-sm-around d-md-inline-flex flex-md-column justify-content-md-around d-lg-inline-flex flex-lg-row justify-content-lg-around d-xl-inline-flex flex-xl-row justify-content-xl-around"
   >
     <div class="content">
-      <div
-        class="p-2"
-        data-aos="zoom-in-left"
-        data-aos-delay="500"
-        data-aos-duration="1000"
-      >
-        <p class="title">
-          Uniquely <br />
-          crafted web Experiences!
-        </p>
-        <h1 class="sub-title">Hi, I'm Moinuddin</h1>
+      <div class="p-2">
+        <div
+          data-aos="zoom-in-left"
+          data-aos-delay="500"
+          data-aos-duration="1000"
+        >
+          <p class="title">
+            Uniquely <br />
+            Crafted Web Experiences!
+          </p>
+        </div>
+        <div data-aos="zoom-in-left" data-aos-duration="1000">
+          <ngx-typed-js
+            [strings]="[
+              'Hi, I am Moinuddin.',
+              'I am a fontend Developer.',
+              'I build interactive web apps!'
+            ]"
+            [startDelay]="1000"
+            [loop]="true"
+            [typeSpeed]="30"
+            [backSpeed]="20"
+          >
+            <h1 class="sub-title typing"></h1>
+          </ngx-typed-js>
+          <!-- <h1 #subtitle class="sub-title"></h1> -->
+        </div>
 
-        <div class="mt-4 d-inline-flex">
+        <div
+          class="mt-4 d-inline-flex"
+          data-aos="zoom-in-left"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           <button class="learn_more" [routerLink]="['/services']">
             Learn more!
           </button>
@@ -28,15 +49,18 @@
           </button>
         </div>
         <div
+          data-aos="zoom-in-right"
+          data-aos-delay="200"
+          data-aos-duration="1000"
           class="socials mt-4 d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"
         >
-          <a href="#" id="github"><fa-icon [icon]="faGithub"></fa-icon></a>
+          <a href="https://github.com/moynuddin/" id="github"
+            ><fa-icon [icon]="faGithub"></fa-icon
+          ></a>
           <a href="#" id="linkedin"
             ><fa-icon [icon]="faLinkedinIn"></fa-icon
           ></a>
-          <a href="#" id="instagram"
-            ><fa-icon [icon]="faInstagramSquare"></fa-icon
-          ></a>
+          <a href="#"><fa-icon [icon]="faInstagramSquare"></fa-icon></a>
         </div>
       </div>
     </div>
