@@ -29,6 +29,7 @@
     width: 0.2rem;
     background: black;
     position: relative;
+    border-radius: 5px;
     animation: before 1s ease-in-out infinite;
   }
   &::after {

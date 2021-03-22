@@ -28,6 +28,7 @@
     position: relative;
     width: 0.2rem;
     border-top: 0.2rem;
+    border-radius: 5px;
     background: #262626;
     margin-right: 0.2rem;
     animation: skills 1s ease-in-out infinite;
@@ -37,7 +38,7 @@
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   grid-auto-rows: minmax(3rem, auto);
-  gap: 1rem;
+  gap: 1.5rem;
   font-size: 7rem;
   margin-top: 2rem;
 
@@ -90,30 +91,31 @@
     }
   }
 }
-.wrapper-form {
-  margin-top: 13rem;
-  background: transparent;
-  border: 5px dashed #36d1dc;
-  padding: 1rem 2rem;
-  box-shadow: 0 0 10px #36d1dc;
+.svg-graphics {
+  margin-top: 17rem;
+  // background: transparent;
+  // border: 5px dashed #36d1dc;
+  // padding: 1rem 2rem;
+  // box-shadow: 0 0 10px #36d1dc;
 }
-.form-control {
-  background: transparent !important;
-  outline: 0;
-  border-width: 0 0 2px;
-  border-color: black;
-  border-radius: 0;
-  &::placeholder {
-    color: rgb(248, 231, 231);
-    font-size: 1rem;
-  }
-  &:focus {
-    box-shadow: none;
-  }
-}
-.btn {
-  background: cyan;
-}
+// .form-control {
+//   background: transparent !important;
+//   outline: 0;
+//   border-width: 0 0 2px;
+//   border-color: black;
+//   border-radius: 0;
+//   &::placeholder {
+//     color: rgb(248, 231, 231);
+//     font-size: 1rem;
+//   }
+//   &:focus {
+//     box-shadow: none;
+//   }
+// }
+// .btn {
+//   background: rgb(5, 20, 20);
+//   color: #fff;
+// }
 
 @keyframes skills {
   0% {
@@ -133,7 +135,7 @@
 @media (max-width: 575.98px) {
   .skills {
     width: 100%;
-    height: auto;
+    height: 100vh;
     margin: 0;
     border-radius: 0;
   }
@@ -149,7 +151,10 @@
     font-size: 4rem;
     margin-left: 1rem;
   }
-  .wrapper-form {
-    margin-top: 3rem;
+  .svg-wrapper {
+    display: none;
   }
+  // .wrapper-form {
+  //   margin-top: 3rem;
+  // }
 }

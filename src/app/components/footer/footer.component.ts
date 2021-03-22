@@ -6,11 +6,10 @@ import {
   AfterViewInit,
 } from '@angular/core';
 
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NgxSpinnerService } from 'ngx-spinner';
-import { ToastrService } from 'ngx-toastr'
 import VanillaTilt from 'vanilla-tilt';
 import aos from 'aos';
+import anime from 'animejs';
+import Vivus from 'vivus';
 
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
@@ -21,7 +20,9 @@ import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { faSass } from '@fortawesome/free-brands-svg-icons';
 import { faBootstrap } from '@fortawesome/free-brands-svg-icons';
-import { faSave } from '@fortawesome/free-solid-svg-icons';
+import { faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import { faNpm } from '@fortawesome/free-brands-svg-icons';
+import { faYarn } from '@fortawesome/free-brands-svg-icons';
 
 import { FormService } from '../../_services/form.service';
 @Component({
@@ -40,66 +41,48 @@ export class FooterComponent implements OnInit, AfterViewInit {
   @ViewChild('sass') sass: ElementRef;
   @ViewChild('react') react: ElementRef;
   @ViewChild('bootstrap') bootstrap: ElementRef;
-  contactForm: FormGroup;
-  submitted: Boolean = false;
+  @ViewChild('svganime') svganime: ElementRef;
+  // contactForm: FormGroup;
+  // submitted: Boolean = false;
   faHtml5 = faHtml5;
   faCss3 = faCss3;
   faJsSquare = faJsSquare;
   faAngular = faAngular;
   faGitAlt = faGitAlt;
   faGithubSquare = faGithubSquare;
-  faSave = faSave;
   faBootstrap = faBootstrap;
   faReact = faReact;
   faSass = faSass;
+  faNodeJs = faNodeJs;
+  faNpm = faNpm;
+  faYarn = faYarn;
   message: string;
 
-  constructor(private fb: FormBuilder, private formServiceAPI: FormService, private spinner:NgxSpinnerService, private toastr: ToastrService) {}
+  constructor() {}
 
   ngOnInit(): void {
     aos.init({
       once: true,
     });
-    this.contactForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required],
-      message: ['', Validators.required],
-    });
   }
-  get f() {
-    return this.contactForm.controls;
-  }
+
   ngAfterViewInit() {
+    console.log(this.svganime.nativeElement);
+
+    new Vivus(this.svganime.nativeElement, {
+      type: 'sync',
+      duration: 12,
+      animTimingFunction: Vivus.Ease,
+    });
     VanillaTilt.init(this.html5.nativeElement);
     VanillaTilt.init(this.css3.nativeElement);
     VanillaTilt.init(this.js.nativeElement);
     VanillaTilt.init(this.angular.nativeElement);
     VanillaTilt.init(this.git.nativeElement);
     VanillaTilt.init(this.github.nativeElement);
-    VanillaTilt.init(this.myForm.nativeElement);
+    // VanillaTilt.init(this.myForm.nativeElement);
     VanillaTilt.init(this.sass.nativeElement);
     VanillaTilt.init(this.react.nativeElement);
     VanillaTilt.init(this.bootstrap.nativeElement);
-  }
-
-  onSubmitHandler() {
-    this.submitted = true;
-    this.spinner.show();
-    this.formServiceAPI.postForm(this.contactForm.value).subscribe(
-      (res) => {
-        if (res['ok'] === true) {
-          this.spinner.hide()
-          this.toastr.success("Response Saved!")
-          // this.message = 'Response saved!';
-          this.contactForm.reset();
-          this.submitted = false;
-        }
-      },
-      (error) => {
-        this.spinner.hide()
-        this.toastr.error("Something went wrong!")
-        console.log(error);
-      }
-    );
   }
 }

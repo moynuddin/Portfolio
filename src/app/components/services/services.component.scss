@@ -99,6 +99,7 @@
     border-top: 0.2rem;
     background: #262626;
     margin-right: 0.2rem;
+    border-radius: 5px;
     animation: services 1s ease-in-out infinite;
   }
 }
@@ -136,8 +137,15 @@
 @media (max-width: 575.98px) {
   .container {
     margin-top: 2rem;
-    // margin-left: 0.7rem;
-    // margin-right: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    .card {
+      margin-right: auto !important;
+    }
   }
   .row {
     margin-right: 0 !important;

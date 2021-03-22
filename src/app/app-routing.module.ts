@@ -6,6 +6,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'profile', component: ProfileComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'skills', component: FooterComponent },
+  { path: 'contacts', component: ContactsComponent },
   { path: '**', component: NotfoundComponent },
 ];
 

@@ -36,7 +36,8 @@
             "scripts": [
               "node_modules/vanilla-tilt/dist/vanilla-tilt.js",
               "node_modules/aos/dist/aos.js",
-              "node_modules/animejs/lib/anime.es.js"
+              "node_modules/animejs/lib/anime.es.js",
+              "node_modules/vivus/dist/vivus.min.js"
             ]
           },
           "configurations": {

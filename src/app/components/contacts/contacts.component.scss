@@ -1,0 +1,27 @@
+.contacts {
+  background: rgba(143, 76, 13, 0.788);
+  width: 97%;
+  height: 100vh;
+  border-top-right-radius: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.form-control {
+  background: transparent !important;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: black;
+  border-radius: 0;
+  &::placeholder {
+    color: rgb(248, 231, 231);
+    font-size: 1rem;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+.btn {
+  background: rgb(5, 20, 20);
+  color: #fff;
+}
