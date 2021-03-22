@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
 import aos from 'aos';
-import anime from 'animejs/lib/anime.es.js';
+// import anime from 'animejs/lib/anime.es.js';
 import {
   faGithub,
   faInstagramSquare,

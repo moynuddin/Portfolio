@@ -7,6 +7,8 @@ import {
 } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr'
 import VanillaTilt from 'vanilla-tilt';
 import aos from 'aos';
 
@@ -52,7 +54,7 @@ export class FooterComponent implements OnInit, AfterViewInit {
   faSass = faSass;
   message: string;
 
-  constructor(private fb: FormBuilder, private formServiceAPI: FormService) {}
+  constructor(private fb: FormBuilder, private formServiceAPI: FormService, private spinner:NgxSpinnerService, private toastr: ToastrService) {}
 
   ngOnInit(): void {
     aos.init({
@@ -82,19 +84,22 @@ export class FooterComponent implements OnInit, AfterViewInit {
 
   onSubmitHandler() {
     this.submitted = true;
+    this.spinner.show();
     this.formServiceAPI.postForm(this.contactForm.value).subscribe(
       (res) => {
         if (res['ok'] === true) {
-          this.message = 'Response saved!';
+          this.spinner.hide()
+          this.toastr.success("Response Saved!")
+          // this.message = 'Response saved!';
           this.contactForm.reset();
           this.submitted = false;
         }
       },
       (error) => {
+        this.spinner.hide()
+        this.toastr.error("Something went wrong!")
         console.log(error);
       }
     );
-
-    console.log(this.contactForm.value);
   }
 }
