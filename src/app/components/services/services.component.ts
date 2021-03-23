@@ -1,6 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 
 import aos from 'aos';
+import TypeIt from 'typeit';
 
 import { faPalette } from '@fortawesome/free-solid-svg-icons';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +19,9 @@ import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss'],
 })
-export class ServicesComponent implements OnInit {
+export class ServicesComponent implements OnInit, AfterViewInit {
+  @ViewChild('title') title: ElementRef;
+  @ViewChild('subtitle') subtitle: ElementRef;
   faPalette = faPalette;
   faLightbulb = faLightbulb;
   faBezierCurve = faBezierCurve;
@@ -32,5 +41,16 @@ export class ServicesComponent implements OnInit {
     aos.init({
       once: true,
     });
+  }
+
+  ngAfterViewInit() {
+    new TypeIt(this.subtitle.nativeElement, {
+      speed: 50,
+      startDelay: 700,
+      loop: true,
+    })
+      .type('What i do.')
+      .pause(600)
+      .go();
   }
 }

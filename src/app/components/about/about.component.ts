@@ -8,6 +8,8 @@ import {
 
 import aos from 'aos';
 import VanillaTilt from 'vanilla-tilt';
+import TypeIt from 'typeit';
+
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
@@ -19,6 +21,7 @@ import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
 export class AboutComponent implements OnInit, AfterViewInit {
   @ViewChild('scroll') scroll: ElementRef;
   @ViewChild('line') line: ElementRef;
+  @ViewChild('subtitle') subtitle: ElementRef;
   faGithub = faGithub;
   faLinkedinIn = faLinkedinIn;
   faInstagramSquare = faInstagramSquare;
@@ -35,6 +38,14 @@ export class AboutComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     VanillaTilt.init(this.scroll.nativeElement);
     VanillaTilt.init(this.line.nativeElement);
+    new TypeIt(this.subtitle.nativeElement, {
+      speed: 50,
+      loop: true,
+      startDelay: 700,
+    })
+      .type('Who I am?.')
+      .pause(600)
+      .go();
   }
 
   downloadFileHandler() {

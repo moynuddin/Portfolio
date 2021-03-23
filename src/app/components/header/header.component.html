@@ -65,10 +65,19 @@
           >About</a
         >
       </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="'/contacts'"
+          routerLinkActive="is-active"
+          (click)="toggel()"
+          >Contacts</a
+        >
+      </li>
     </ul>
     <button
       class="btn btn-primary hireMe_btn"
-      [routerLink]="['/skills']"
+      [routerLink]="['/contacts']"
       (click)="toggel()"
     >
       Hire Me

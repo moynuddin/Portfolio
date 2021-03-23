@@ -8,8 +8,7 @@ import {
 
 import VanillaTilt from 'vanilla-tilt';
 import aos from 'aos';
-import anime from 'animejs';
-import Vivus from 'vivus';
+import TypeIt from 'typeit';
 
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
@@ -42,6 +41,7 @@ export class FooterComponent implements OnInit, AfterViewInit {
   @ViewChild('react') react: ElementRef;
   @ViewChild('bootstrap') bootstrap: ElementRef;
   @ViewChild('svganime') svganime: ElementRef;
+  @ViewChild('subtitle') subtitle: ElementRef;
   // contactForm: FormGroup;
   // submitted: Boolean = false;
   faHtml5 = faHtml5;
@@ -67,13 +67,6 @@ export class FooterComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.svganime.nativeElement);
-
-    new Vivus(this.svganime.nativeElement, {
-      type: 'sync',
-      duration: 12,
-      animTimingFunction: Vivus.Ease,
-    });
     VanillaTilt.init(this.html5.nativeElement);
     VanillaTilt.init(this.css3.nativeElement);
     VanillaTilt.init(this.js.nativeElement);
@@ -84,5 +77,14 @@ export class FooterComponent implements OnInit, AfterViewInit {
     VanillaTilt.init(this.sass.nativeElement);
     VanillaTilt.init(this.react.nativeElement);
     VanillaTilt.init(this.bootstrap.nativeElement);
+
+    new TypeIt(this.subtitle.nativeElement, {
+      speed: 50,
+      startDelay: 700,
+      loop: true,
+    })
+      .type('What i know')
+      .pause(600)
+      .go();
   }
 }

@@ -1,16 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { faSave } from '@fortawesome/free-solid-svg-icons';
 
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
+import aos from 'aos';
+import VanillaTilt from 'vanilla-tilt';
+import TypeIt from 'typeit';
 import { FormService } from '../../_services/form.service';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.scss'],
 })
-export class ContactsComponent implements OnInit {
+export class ContactsComponent implements OnInit, AfterViewInit {
+  @ViewChild('contacts') contacts: ElementRef;
+  @ViewChild('myForm') myForm: ElementRef;
+  @ViewChild('content') content: ElementRef;
+  @ViewChild('subtitle') subtitle: ElementRef;
   contactForm: FormGroup;
   submitted: Boolean = false;
   faSave = faSave;
@@ -27,6 +40,22 @@ export class ContactsComponent implements OnInit {
       email: ['', Validators.required],
       message: ['', Validators.required],
     });
+    aos.init({
+      once: true,
+    });
+  }
+  ngAfterViewInit() {
+    VanillaTilt.init(this.contacts.nativeElement);
+    VanillaTilt.init(this.myForm.nativeElement);
+    VanillaTilt.init(this.content.nativeElement);
+    new TypeIt(this.subtitle.nativeElement, {
+      speed: 50,
+      startDelay: 700,
+      loop: true,
+    })
+      .type('Where to find me.')
+      .pause(500)
+      .go();
   }
   get f() {
     return this.contactForm.controls;
