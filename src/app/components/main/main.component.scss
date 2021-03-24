@@ -82,6 +82,7 @@ $primary-color: #044e97;
   height: 20rem;
   width: 20rem;
   filter: drop-shadow(2px 4px 10px #c2c2c2);
+  filter: blur(3px);
 }
 .circle {
   display: inline-flex;
@@ -95,6 +96,17 @@ $primary-color: #044e97;
   height: 13rem;
   animation: circle 15s ease-in-out infinite;
   filter: drop-shadow(2px 2px 5px grey);
+  // filter: blur(2px);
+}
+.geometry {
+  top: 6rem;
+  right: 0px;
+  z-index: -1;
+  filter: blur(4px);
+  opacity: 0.7;
+  & img {
+    width: 24rem;
+  }
 }
 
 @keyframes circle {

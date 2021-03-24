@@ -74,6 +74,7 @@
     filter: contrast(1);
     filter: drop-shadow(0 0 10px #3d0a0a);
     animation: curve 20s ease-in-out infinite;
+    filter: blur(1.5px);
   }
 }
 

@@ -22,8 +22,6 @@ li {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.2rem;
   a {
-    // border-radius: 61% 39% 44% 56% / 66% 42% 58% 34%;
-    // transition: border-radius 0.5s ease-in-out;
     padding: 0.5rem 1rem;
     text-decoration: none;
     &::before {
@@ -32,12 +30,21 @@ li {
       width: 0;
       border-bottom: 4px solid black;
       top: 1.5 rem;
-      // transition: width 1s;
     }
-    // &:hover {
-    //   // border: 4px solid grey;
-    //   // border-radius: 86% 14% 91% 9% / 10% 81% 19% 90%;
-    // }
+  }
+}
+.navbar-nav {
+  transition: 1s ease;
+  & .nav-item .nav-link:hover::before {
+    top: 4rem;
+    width: 4rem;
+    height: 10px;
+    border: none;
+    filter: blur(2px);
+    background: rgb(238, 255, 1);
+    transition: 0.5s ease-out;
+    z-index: -1;
+    // visibility: hidden;
   }
 }
 .is-active {
@@ -104,18 +111,23 @@ li {
     background: darken($primary-color, 10%);
   }
 }
-// @media (max-width: 575.98px) {
-//   .hireMe_btn {
-//     display: block;
-//     width: 12rem;
-//     height: 3rem;
-//     border: none;
-//     color: $primary-color;
-//     // border-radius: 10px;
-//     background: transparent;
-//     color: #fff;
-//     font-weight: 400;
-//     letter-spacing: 0.2rem;
-//     padding: 0.5rem 1rem;
-//   }
-// }
+@media (max-width: 575.98px) {
+  // .hireMe_btn {
+  //   display: block;
+  //   width: 12rem;
+  //   height: 3rem;
+  //   border: none;
+  //   color: $primary-color;
+  //   // border-radius: 10px;
+  //   background: transparent;
+  //   color: #fff;
+  //   font-weight: 400;
+  //   letter-spacing: 0.2rem;
+  //   padding: 0.5rem 1rem;
+  // }
+  .navbar-nav {
+    & .nav-item .nav-link:hover::before {
+      display: none;
+    }
+  }
+}

@@ -5,6 +5,7 @@
     <div class="content">
       <div class="p-2">
         <div
+          class="position-relative"
           data-aos="zoom-in-left"
           data-aos-delay="500"
           data-aos-duration="1000"
@@ -14,20 +15,15 @@
             Crafted Web Experiences!
           </p>
         </div>
+        <div
+          class="position-absolute geometry"
+          data-aos="zoom-in-right"
+          data-aos-delay="800"
+          data-aos-duration="1000"
+        >
+          <img src="../../../assets/images/geometry.png" alt="" />
+        </div>
         <div data-aos="zoom-in-left" data-aos-duration="1000">
-          <!-- <ngx-typed-js
-            [strings]="[
-              'Hi, I am Moinuddin.',
-              'I am a fontend Developer.',
-              'I build interactive web apps!'
-            ]"
-            [startDelay]="1000"
-            [loop]="true"
-            [typeSpeed]="40"
-            [backSpeed]="20"
-          >
-            <h1 class="sub-title typing"></h1>
-          </ngx-typed-js> -->
           <h1 #subtitle class="sub-title"></h1>
         </div>
 
@@ -57,10 +53,14 @@
           <a href="https://github.com/moynuddin/" id="github"
             ><fa-icon [icon]="faGithub"></fa-icon
           ></a>
-          <a href="#" id="linkedin"
+          <a
+            href="https://www.linkedin.com/in/moin-uddin-5435b1100/"
+            id="linkedin"
             ><fa-icon [icon]="faLinkedinIn"></fa-icon
           ></a>
-          <a href="#"><fa-icon [icon]="faInstagramSquare"></fa-icon></a>
+          <a href="https://www.instagram.com/moyn_uddin/"
+            ><fa-icon [icon]="faInstagramSquare"></fa-icon
+          ></a>
         </div>
       </div>
     </div>
