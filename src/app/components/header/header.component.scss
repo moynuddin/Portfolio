@@ -128,14 +128,14 @@ li {
       color: azure;
     }
   }
-  .hamburger {
-    clip-path: circle(10rem);
-  }
+  // .hamburger {
+  //   // clip-path: circle(10rem);
+  // }
   .button {
     display: flex;
     justify-content: center;
   }
-  .wrapper {
+  .wrapper-menu {
     height: 100vh;
     background: linear-gradient(#0575e6, #021b79);
     // clip-path: circle(50%);
