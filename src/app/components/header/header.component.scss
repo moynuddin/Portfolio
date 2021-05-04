@@ -41,14 +41,14 @@ li {
     height: 10px;
     border: none;
     filter: blur(2px);
-    background: rgb(238, 255, 1);
+    background: rgb(64, 37, 139);
     transition: 0.5s ease-out;
     z-index: -1;
     // visibility: hidden;
   }
 }
 .is-active {
-  color: #031a31;
+  color: #bbabab !important;
   // background: #262626;
 }
 .hamburger {
@@ -60,6 +60,7 @@ li {
   transition: 0.5s all;
   box-shadow: yellowgreen;
   cursor: pointer;
+  // display: none;
   // height: 2.5rem;
 
   &::before,
@@ -125,7 +126,7 @@ li {
       margin-bottom: 0.8rem;
     }
     & .nav-item .nav-link {
-      color: azure;
+      color: #2e6161;
     }
   }
   // .hamburger {
@@ -159,5 +160,11 @@ li {
     to {
       clip-path: circle(30rem at 98% 35%);
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
   }
 }

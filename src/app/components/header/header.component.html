@@ -12,7 +12,12 @@
   >
     &#9776;
   </button> -->
-    <div #burger class="navbar-toggler hamburger" (click)="toggel()"></div>
+
+    <div
+      #burger
+      class="navbar-toggler hamburger d-md-none d-lg-none"
+      (click)="toggel()"
+    ></div>
 
     <!-- Step 2: Add the ngbCollapse directive to the element below. -->
     <div
@@ -26,17 +31,17 @@
             class="nav-link"
             [routerLink]="'/home'"
             routerLinkActive="is-active"
-            (click)="toggel()"
-            >Home</a
           >
+            Home
+          </a>
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
             [routerLink]="'/services'"
             routerLinkActive="is-active"
-            (click)="toggel()"
-            >Services</a
+          >
+            Services</a
           >
         </li>
         <li class="nav-item">
@@ -44,7 +49,6 @@
             class="nav-link"
             [routerLink]="'/profile'"
             routerLinkActive="is-active"
-            (click)="toggel()"
             >Profile</a
           >
         </li>
@@ -53,7 +57,6 @@
             class="nav-link"
             [routerLink]="'/skills'"
             routerLinkActive="is-active"
-            (click)="toggel()"
             >Skills</a
           >
         </li>
@@ -62,7 +65,6 @@
             class="nav-link"
             [routerLink]="'/about'"
             routerLinkActive="is-active"
-            (click)="toggel()"
             >About</a
           >
         </li>
@@ -71,17 +73,12 @@
             class="nav-link"
             [routerLink]="'/contacts'"
             routerLinkActive="is-active"
-            (click)="toggel()"
             >Contacts</a
           >
         </li>
       </ul>
       <div class="button">
-        <button
-          class="btn btn-primary hireMe_btn"
-          [routerLink]="['/contacts']"
-          (click)="toggel()"
-        >
+        <button class="btn btn-primary hireMe_btn" [routerLink]="['/contacts']">
           Hire Me
         </button>
       </div>

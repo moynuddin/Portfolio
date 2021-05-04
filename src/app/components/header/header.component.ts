@@ -19,11 +19,23 @@ export class HeaderComponent implements OnInit {
     this.isMenuCollapsed = !this.isMenuCollapsed;
     if (this.isMenuCollapsed) {
       open.classList.remove('open');
-      container.classList.remove('wrapper-menu');
+      // container.classList.remove('wrapper-menu');
     } else {
       open.classList.add('open');
+      // container.classList.add('wrapper-menu');
+    }
+  }
 
-      container.classList.add('wrapper-menu');
+  menuEvent() {
+    const open = this.burger.nativeElement;
+    const container = this.wrapper.nativeElement;
+    this.isMenuCollapsed = !this.isMenuCollapsed;
+    if (this.isMenuCollapsed) {
+      open.classList.remove('open');
+      // container.classList.remove('wrapper-menu');
+    } else {
+      open.classList.add('open');
+      // container.classList.add('wrapper-menu');
     }
   }
 }
